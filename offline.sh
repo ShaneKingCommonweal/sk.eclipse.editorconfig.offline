@@ -13,7 +13,10 @@ cp -r editorconfig-eclipse/editorconfig-eclipse-p2 editorconfig-eclipse-offline
 
 cd editorconfig-eclipse-offline
 git pull
-git add -A
+#can not add target...
+#git add -A
+git add .
+git add -u
 git commit -m "sync at $(date +'%Y-%m-%d %H:%M')"
 git push -f "https://ShaneKing:${GH_TOKEN}@github.com/ShaneKing/editorconfig-eclipse-offline.git" master:master
 

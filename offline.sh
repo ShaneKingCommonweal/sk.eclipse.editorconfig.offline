@@ -4,6 +4,8 @@ git clone "https://github.com/ncjones/editorconfig-eclipse.git"
 
 cd editorconfig-eclipse
 
+git submodule init && git submodule update
+
 mvn clean install
 
 cd ../../

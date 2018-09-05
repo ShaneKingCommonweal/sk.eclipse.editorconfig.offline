@@ -7,13 +7,18 @@ git submodule init && git submodule update
 mvn clean install
 pwd
 ls -alh editorconfig-eclipse-p2
+ls -alh editorconfig-eclipse-p2/target
+ls -alh editorconfig-eclipse-p2/target/repository
 cd ../
 
 [[ -d editorconfig-eclipse-offline ]] && rm -rf editorconfig-eclipse-offline
 git clone "https://github.com/ShaneKing/editorconfig-eclipse-offline.git"
+rm -rf editorconfig-eclipse-offline/editorconfig-eclipse-p2
 cp -r editorconfig-eclipse/editorconfig-eclipse-p2 editorconfig-eclipse-offline/editorconfig-eclipse-p2
 pwd
 ls -alh editorconfig-eclipse-offline/editorconfig-eclipse-p2
+ls -alh editorconfig-eclipse-offline/editorconfig-eclipse-p2/target
+ls -alh editorconfig-eclipse-offline/editorconfig-eclipse-p2/target/repository
 
 git -C editorconfig-eclipse-offline pull
 git -C editorconfig-eclipse-offline add -A

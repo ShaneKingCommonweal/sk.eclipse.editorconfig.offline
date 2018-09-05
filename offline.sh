@@ -16,8 +16,8 @@ git clone "https://github.com/ShaneKing/editorconfig-eclipse-offline.git"
 
 cp -r ./editorconfig-eclipse/editorconfig-eclipse-p2 ./editorconfig-eclipse-offline/editorconfig-eclipse-p2
 
-ll ./editorconfig-eclipse-offline
-ll ./editorconfig-eclipse-offline/editorconfig-eclipse-p2
+ls -alh ./editorconfig-eclipse-offline
+ls -alh ./editorconfig-eclipse-offline/editorconfig-eclipse-p2
 
 git -C ./editorconfig-eclipse-offline pull
 git -C ./editorconfig-eclipse-offline add -A

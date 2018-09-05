@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[[ -d editorconfig-eclipse-offline ]] && rm -rf editorconfig-eclipse-offline
+[[ -d editorconfig-eclipse ]] && rm -rf editorconfig-eclipse
 git clone "https://github.com/ncjones/editorconfig-eclipse.git"
 cd editorconfig-eclipse
 git submodule init && git submodule update

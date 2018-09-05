@@ -1,5 +1,9 @@
 sudo: true
 
+cache:
+  directories:
+    - $HOME/.m2
+
 before_install:
   - chmod +x ./offline.sh
   - ./offline.sh

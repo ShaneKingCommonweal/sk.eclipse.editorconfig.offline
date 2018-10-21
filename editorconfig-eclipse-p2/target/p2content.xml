@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='201810191702.editorconfig' version='1.0.0.077--7735I535K5G37'>
+  <unit id='201810211702.editorconfig' version='1.0.0.077--7735I53755G37'>
     <properties size='2'>
       <property name='org.eclipse.equinox.p2.name' value='EditorConfig'/>
       <property name='org.eclipse.equinox.p2.type.category' value='true'/>
     </properties>
     <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='201810191702.editorconfig' version='1.0.0.077--7735I535K5G37'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201810211702.editorconfig' version='1.0.0.077--7735I53755G37'/>
     </provides>
     <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.group' range='[0.4.0.201810191702,0.4.0.201810191702]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.group' range='[0.4.0.201810211702,0.4.0.201810211702]'/>
     </requires>
     <touchpoint id='null' version='0.0.0'/>
   </unit>

@@ -11,5 +11,5 @@ Installing Locally
 Install via the local update site: `editorconfig-eclipse-p2/target/repository`.
 
 
-[travis]:https://travis-ci.org/ShaneKing/sh.eclipse.editorconfig.offline
-[travis img]:https://secure.travis-ci.org/ShaneKing/sh.eclipse.editorconfig.offline.png
+[travis]:https://travis-ci.org/ShaneKingCommonweal/sk.eclipse.editorconfig.offline
+[travis img]:https://secure.travis-ci.org/ShaneKingCommonweal/sk.eclipse.editorconfig.offline.png

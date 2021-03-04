@@ -1,8 +1,12 @@
-sudo: true
+language: java
+sudo: false # faster builds
 
 cache:
   directories:
     - $HOME/.m2
+
+jdk:
+  - openjdk8
 
 before_install:
   - chmod +x ./offline.sh

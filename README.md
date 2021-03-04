@@ -1,4 +1,4 @@
-# sh.eclipse.editorconfig.offline
+# sk.eclipse.editorconfig.offline
 
 
 ### Build

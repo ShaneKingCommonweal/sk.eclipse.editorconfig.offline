@@ -611,39 +611,6 @@
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='editorconfig-eclipse-feature.feature.group' version='0.4.0.202109270338' singleton='false'>
-      <update id='editorconfig-eclipse-feature.feature.group' range='[0.0.0,0.4.0.202109270338)' severity='0'/>
-      <properties size='7'>
-        <property name='org.eclipse.equinox.p2.name' value='EditorConfig Eclipse'/>
-        <property name='org.eclipse.equinox.p2.description' value='EditorConfig support for Eclipse editors.&#xA;&#xA;Visit http://editorconfig.org/ for more info.'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Nathan Jones'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-        <property name='maven-groupId' value='com.ncjones'/>
-        <property name='maven-artifactId' value='editorconfig-eclipse-feature'/>
-        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.group' version='0.4.0.202109270338'/>
-      </provides>
-      <requires size='3'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.core' range='[0.4.0.202109270338,0.4.0.202109270338]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.ui' range='[0.4.0.202109270338,0.4.0.202109270338]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.jar' range='[0.4.0.202109270338,0.4.0.202109270338]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='https://www.apache.org/licenses/LICENSE-2.0.txt' url='https://www.apache.org/licenses/LICENSE-2.0.txt'>
-          Apache License, Version 2.0
-        </license>
-      </licenses>
-      <copyright>
-        Copyright Nathan Jones 2015
-      </copyright>
-    </unit>
     <unit id='org.eclipse.ui.editors' version='3.8.200.v20140401-1310'>
       <update id='org.eclipse.ui.editors' range='[0.0.0,3.8.200.v20140401-1310)' severity='0'/>
       <properties size='8'>
@@ -2065,6 +2032,43 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='editorconfig-eclipse-feature.feature.jar' version='0.4.0.202109280338'>
+      <properties size='6'>
+        <property name='org.eclipse.equinox.p2.name' value='EditorConfig Eclipse'/>
+        <property name='org.eclipse.equinox.p2.description' value='EditorConfig support for Eclipse editors.&#xA;&#xA;Visit http://editorconfig.org/ for more info.'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Nathan Jones'/>
+        <property name='maven-groupId' value='com.ncjones'/>
+        <property name='maven-artifactId' value='editorconfig-eclipse-feature'/>
+        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.jar' version='0.4.0.202109280338'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='editorconfig-eclipse-feature' version='0.4.0.202109280338'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='editorconfig-eclipse-feature' version='0.4.0.202109280338'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.apache.org/licenses/LICENSE-2.0.txt' url='https://www.apache.org/licenses/LICENSE-2.0.txt'>
+          Apache License, Version 2.0
+        </license>
+      </licenses>
+      <copyright>
+        Copyright Nathan Jones 2015
+      </copyright>
+    </unit>
     <unit id='org.eclipse.text' version='3.5.300.v20130515-1451' singleton='false'>
       <update id='org.eclipse.text' range='[0.0.0,3.5.300.v20130515-1451)' severity='0'/>
       <properties size='8'>
@@ -2142,6 +2146,46 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.e4.core.contexts&#xA;Bundle-Version: 1.3.100.v20140407-1019
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.editorconfig.ui' version='0.4.0.202109280338'>
+      <update id='org.eclipse.editorconfig.ui' range='[0.0.0,0.4.0.202109280338)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginName' value='EditorConfig - UI'/>
+        <property name='df_LT.providerName' value='Nathan Jones'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='com.ncjones'/>
+        <property name='maven-artifactId' value='org.eclipse.editorconfig.ui'/>
+        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.ui' version='0.4.0.202109280338'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.editorconfig.ui' version='0.4.0.202109280338'/>
+        <provided namespace='java.package' name='org.eclipse.editorconfig.ui.text' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.editorconfig.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.editorconfig.ui' version='0.4.0.202109280338'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.editorconfig.ui;singleton:=true&#xA;Bundle-Version: 0.4.0.202109280338
           </instruction>
         </instructions>
       </touchpointData>
@@ -2290,43 +2334,6 @@
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='editorconfig-eclipse-feature.feature.jar' version='0.4.0.202109270338'>
-      <properties size='6'>
-        <property name='org.eclipse.equinox.p2.name' value='EditorConfig Eclipse'/>
-        <property name='org.eclipse.equinox.p2.description' value='EditorConfig support for Eclipse editors.&#xA;&#xA;Visit http://editorconfig.org/ for more info.'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Nathan Jones'/>
-        <property name='maven-groupId' value='com.ncjones'/>
-        <property name='maven-artifactId' value='editorconfig-eclipse-feature'/>
-        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.jar' version='0.4.0.202109270338'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='editorconfig-eclipse-feature' version='0.4.0.202109270338'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='editorconfig-eclipse-feature' version='0.4.0.202109270338'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='https://www.apache.org/licenses/LICENSE-2.0.txt' url='https://www.apache.org/licenses/LICENSE-2.0.txt'>
-          Apache License, Version 2.0
-        </license>
-      </licenses>
-      <copyright>
-        Copyright Nathan Jones 2015
-      </copyright>
     </unit>
     <unit id='org.eclipse.jface.text' version='3.9.2.v20141003-1326' singleton='false'>
       <update id='org.eclipse.jface.text' range='[0.0.0,3.9.2.v20141003-1326)' severity='0'/>
@@ -2536,46 +2543,6 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.equinox.p2.metadata.repository;singleton:=true&#xA;Bundle-Version: 1.2.100.v20131209-2144
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='org.eclipse.editorconfig.ui' version='0.4.0.202109270338'>
-      <update id='org.eclipse.editorconfig.ui' range='[0.0.0,0.4.0.202109270338)' severity='0'/>
-      <properties size='8'>
-        <property name='df_LT.pluginName' value='EditorConfig - UI'/>
-        <property name='df_LT.providerName' value='Nathan Jones'/>
-        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
-        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
-        <property name='maven-groupId' value='com.ncjones'/>
-        <property name='maven-artifactId' value='org.eclipse.editorconfig.ui'/>
-        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
-      </properties>
-      <provides size='5'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.ui' version='0.4.0.202109270338'/>
-        <provided namespace='osgi.bundle' name='org.eclipse.editorconfig.ui' version='0.4.0.202109270338'/>
-        <provided namespace='java.package' name='org.eclipse.editorconfig.ui.text' version='0.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
-      </provides>
-      <requires size='7'>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.editorconfig.core' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.eclipse.editorconfig.ui' version='0.4.0.202109270338'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.eclipse.editorconfig.ui;singleton:=true&#xA;Bundle-Version: 0.4.0.202109270338
           </instruction>
         </instructions>
       </touchpointData>
@@ -3257,6 +3224,39 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='editorconfig-eclipse-feature.feature.group' version='0.4.0.202109280338' singleton='false'>
+      <update id='editorconfig-eclipse-feature.feature.group' range='[0.0.0,0.4.0.202109280338)' severity='0'/>
+      <properties size='7'>
+        <property name='org.eclipse.equinox.p2.name' value='EditorConfig Eclipse'/>
+        <property name='org.eclipse.equinox.p2.description' value='EditorConfig support for Eclipse editors.&#xA;&#xA;Visit http://editorconfig.org/ for more info.'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Nathan Jones'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='com.ncjones'/>
+        <property name='maven-artifactId' value='editorconfig-eclipse-feature'/>
+        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.group' version='0.4.0.202109280338'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.core' range='[0.4.0.202109280338,0.4.0.202109280338]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.ui' range='[0.4.0.202109280338,0.4.0.202109280338]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='editorconfig-eclipse-feature.feature.jar' range='[0.4.0.202109280338,0.4.0.202109280338]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.apache.org/licenses/LICENSE-2.0.txt' url='https://www.apache.org/licenses/LICENSE-2.0.txt'>
+          Apache License, Version 2.0
+        </license>
+      </licenses>
+      <copyright>
+        Copyright Nathan Jones 2015
+      </copyright>
+    </unit>
     <unit id='org.eclipse.e4.ui.services' version='1.1.0.v20140328-1925'>
       <update id='org.eclipse.e4.ui.services' range='[0.0.0,1.1.0.v20140328-1925)' severity='0'/>
       <properties size='8'>
@@ -3304,42 +3304,6 @@
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='org.eclipse.editorconfig.core' version='0.4.0.202109270338'>
-      <update id='org.eclipse.editorconfig.core' range='[0.0.0,0.4.0.202109270338)' severity='0'/>
-      <properties size='8'>
-        <property name='df_LT.pluginName' value='EditorConfig - Core'/>
-        <property name='df_LT.providerName' value='Nathan Jones'/>
-        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
-        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
-        <property name='maven-groupId' value='com.ncjones'/>
-        <property name='maven-artifactId' value='org.eclipse.editorconfig.core'/>
-        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
-      </properties>
-      <provides size='6'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.core' version='0.4.0.202109270338'/>
-        <provided namespace='osgi.bundle' name='org.eclipse.editorconfig.core' version='0.4.0.202109270338'/>
-        <provided namespace='java.package' name='org.eclipse.editorconfig.core' version='0.0.0'/>
-        <provided namespace='java.package' name='org.editorconfig.core' version='0.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
-      </provides>
-      <requires size='2'>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.eclipse.editorconfig.core' version='0.4.0.202109270338'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.eclipse.editorconfig.core;singleton:=true&#xA;Bundle-Version: 0.4.0.202109270338
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
     <unit id='org.eclipse.e4.core.di' version='1.4.0.v20140414-1837' singleton='false'>
       <update id='org.eclipse.e4.core.di' range='[0.0.0,1.4.0.v20140414-1837)' severity='0'/>
       <properties size='8'>
@@ -3377,6 +3341,42 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.e4.core.di&#xA;Bundle-Version: 1.4.0.v20140414-1837
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.editorconfig.core' version='0.4.0.202109280338'>
+      <update id='org.eclipse.editorconfig.core' range='[0.0.0,0.4.0.202109280338)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginName' value='EditorConfig - Core'/>
+        <property name='df_LT.providerName' value='Nathan Jones'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='com.ncjones'/>
+        <property name='maven-artifactId' value='org.eclipse.editorconfig.core'/>
+        <property name='maven-version' value='0.4.0-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.editorconfig.core' version='0.4.0.202109280338'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.editorconfig.core' version='0.4.0.202109280338'/>
+        <provided namespace='java.package' name='org.eclipse.editorconfig.core' version='0.0.0'/>
+        <provided namespace='java.package' name='org.editorconfig.core' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.editorconfig.core' version='0.4.0.202109280338'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.editorconfig.core;singleton:=true&#xA;Bundle-Version: 0.4.0.202109280338
           </instruction>
         </instructions>
       </touchpointData>
